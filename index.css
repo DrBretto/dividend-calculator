@@ -1,7 +1,47 @@
 html {
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  background: rgb(2, 18, 44);
+  background: linear-gradient(
+    167deg,
+    rgba(0, 9, 24, 1) 0%,
+    rgba(2, 18, 44, 1) 23.6%,
+    rgba(17, 18, 54, 1) 76.4%,
+    rgba(4, 27, 74, 1) 100%
+  );
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background: linear-gradient(
+    167deg,
+    rgba(0, 9, 24, 1) 0%,
+    rgba(2, 18, 44, 1) 23.6%,
+    rgba(17, 18, 54, 1) 76.4%,
+    rgba(4, 27, 74, 1) 100%
+  );
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    167deg,
+    rgba(0, 9, 24, 1) 0%,
+    rgba(2, 18, 44, 1) 23.6%,
+    rgba(17, 18, 54, 1) 76.4%,
+    rgba(4, 27, 74, 1) 100%
+  );
+  border: 2px solid black;
+  border-radius: 2px;
 }
 
 html > * {
@@ -14,26 +54,17 @@ body {
   justify-content: space-between;
 
   height: calc(100vh - 12px);
-  width: calc(100vw - 12px);
-  padding: 5px;
+  width: calc(100vw - 17px);
+  padding: 3px;
+  padding-right: 20px;
 
   margin: 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
-  background: rgb(2, 18, 44);
-  background: linear-gradient(
-    167deg,
-    rgba(0, 9, 24, 1) 0%,
-    rgba(2, 18, 44, 1) 23.6%,
-    rgba(17, 18, 54, 1) 76.4%,
-    rgba(4, 27, 74, 1) 100%
-  );
 
   border: 2px solid black;
 }
 
 h1 {
+  font-size: 24px;
   border: 2px solid black;
   border-radius: 5px;
   background: rgba(0, 0, 0, 0.38);
@@ -46,6 +77,8 @@ h1 {
 }
 
 h2 {
+font-size: 18px;
+
   border: 2px solid black;
   border-radius: 5px;
   margin: -5px;
@@ -58,6 +91,7 @@ h2 {
 }
 
 footer {
+  grid-row: span 3;
   vertical-align: bottom;
   text-align: center;
   color: rgb(175, 80, 80);
@@ -145,6 +179,16 @@ aside {
   );
 }
 
+.blue {
+  background: linear-gradient(
+    167deg,
+    rgba(14, 0, 124, 10.764) 0%,
+    rgba(27, 17, 88, 10.764) 23.6%,
+    rgba(44, 2, 54, 10.764) 76.4%,
+    rgba(58, 4, 27, 10.764) 100%
+  );
+}
+
 .yellow {
   background: linear-gradient(
     167deg,
@@ -196,12 +240,14 @@ aside {
 }
 
 h3 {
+  font-size: 16px;
   line-height: 1em;
   margin: -3px;
   margin-top: 3px;
 }
 
 h4 {
+  font-size: 12px;
   line-height: 1em;
   margin: -3px;
   margin-top: 3px;
@@ -216,15 +262,72 @@ h4 {
 }
 
 .open {
+  font-size: 12px;
+
   visibility: visible;
   margin: -3px;
   margin-top: 3px;
   background: linear-gradient(
     167deg,
-    rgba(34, 204, 204, 0.382) 0%,
-    rgba(24, 140, 124, 0.382) 23.6%,
-    rgba(14, 124, 140, 0.382) 76.4%,
-    rgba(4, 84, 84, 0.382) 100%
+    rgba(34, 204, 204, 10.382) 0%,
+    rgba(24, 140, 124, 10.382) 23.6%,
+    rgba(14, 124, 140, 10.382) 76.4%,
+    rgba(4, 84, 84, 10.382) 100%
   );
   color: rgba(255, 255, 255, 1);
 }
+
+form {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 20% 1fr 5px;
+  grid-template-rows: 1.5em 1.5em 1.5em 1.5em 1.5em 1.5em 1.5em 2.5em;
+}
+
+form > * {
+  margin: 2px;
+  background: rgba(0, 0, 0, 0.38)
+}
+
+@media screen and (max-width: 600px) {
+  .grid {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
+  }
+
+  nav {
+    grid-column: span 3;
+    grid-row: span 3;
+  }
+
+  main {
+    grid-column: span 3;
+    grid-row: span 3;
+  }
+  .summary {
+    grid-column: span 3;
+    grid-row: span 2;
+  }
+}
+
+
+.percentage:after {
+  content: "";
+  display: block;
+  background-color: #3d9970;
+}
+.percentage-20:after {
+  width: 20%;
+}
+.percentage-30:after {
+  width: 30%;
+}
+
+
+
+
+
+

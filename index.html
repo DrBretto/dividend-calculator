@@ -10,16 +10,36 @@
     <header>
       <h1 class="dark">Dividend Calculator Wireframe</h1>
     </header>
-
+    
     <div class="grid">
-      <nav class="light window">
+      <nav class="light window unselected">
         <h2 class="dark">Nav / Summary</h2>
-        <div class="dark window">Overview Screen</div>
-        <div class="light window">Overview Screen</div>
-        <div class="light window">Overview Screen</div>
-        <div class="light window">Overview Screen</div>
+        <div class="light window">Total Start</div>
+        <div class="dark window">Strategy Philosophy Overview</div>
+        <div class="light window">Total Projected 1yr</div>
+        <div class="light window">Total Projected 5yr</div>
         <div class="graph dark window">
           <h2 class="dark">Fake Graph</h2>
+          
+          <dl>
+            <dt>A title of the graph</dt>
+            <dd class="percentage">
+              <span class="text">
+                Data 1: 20%
+              </span>
+            </dd>
+            <dd class="percentage">
+              <span class="text">
+                Data 2: 50%
+              </span>
+            </dd>
+            <dd class="percentage">
+              <span class="text">
+                Data 3: 30%
+              </span>
+            </dd>
+          </dl>
+
           <img
             src="https://ak.picdn.net/shutterstock/videos/15215122/thumb/7.jpg"
             alt="fakegraph"
@@ -27,25 +47,55 @@
           />
         </div>
       </nav>
-      <main class="light window">
+      <main class="light window strategies">
         <h2 class="dark">Strategies</h2>
-        <div class="light window strategy"><h3 class="light window">Strategy 1</h3></div>
+        <div class="light window strategy">
+          <h3 class="light window">Strategy 1</h3>
+        </div>
         <div class="light window strategy">
           <h3 class="dark window">Strategy 2</h3>
-          <div class="light window">
+          <div class="blue window stock">
             <h4>MSFT</h4>
+          </div>
+          <div class="blue window stock">
+            <h4>Add New Stock:</h4>
             <form class="open window light">
-              Form: NAme/Symbol - Type - #shares - target price - dividen yield
-              - EPS/EPS5 calculated: proposed equity - PE - earnings yield -
+              <label for="name">Stock name:</label>
+              <input type="text" id="name" name="name"><br><br>
+              <label for="Type:">Stock Type:</label>
+              <input type="text" id="Type:" name="Type:"><br><br>
+              <label for="shares"># of shares:</label>
+              <input type="text" id="shares" name="shares"><br><br>
+              <label for="Type:">Target price:</label>
+              <input type="text" id="Type:" name="Type:"><br><br>
+              <label for="Type:">Dividend Yield:</label>
+              <input type="text" id="Type:" name="Type:"><br><br>
+              <label for="Type:">EPS 1yr:</label>
+              <input type="text" id="Type:" name="Type:"><br><br>
+              <label for="Type:">EPS 5yr:</label>
+              <input type="text" id="Type:" name="Type:"><br><br>
+              <button> Cancel</button>
+              <button>Add Stock</button>
+ calculated: proposed equity - PE - earnings yield -
               Time to recoup investment optional: reinvested
             </form>
           </div>
+          <div class="blue window stock">
+            <h4>MSFT</h4>
+          </div>
+          <div class="blue window stock">
+            <h4>MSFT</h4>
+          </div>
+          <div class="blue window stock">
+            <h4>MSFT</h4>
+          </div>
+
         </div>
         <div class="light window strategy">Strategy 3</div>
         <div class="light window strategy">Strategy 4</div>
       </main>
 
-      <aside class="light window summary">
+      <aside class="light window summary unselected">
         <h2 class="dark">Summary</h2>
         <div class="green window">Happy Score</div>
         <div class="green window">Happy Score</div>
@@ -57,7 +107,7 @@
         <div class="red window">Warning Score</div>
         <div class="yellow window">Medium Score</div>
       </aside>
+      <footer>Copyright ⓒ 2020 drbretto</footer>
     </div>
-    <footer>Copyright ⓒ 2020 drbretto</footer>
   </body>
 </html>
