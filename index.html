@@ -8,18 +8,18 @@
   </head>
   <body>
     <header>
-      <h1>Dividend Calulator Wireframe</h1>
+      <h1 class="dark">Dividend Calculator Wireframe</h1>
     </header>
 
     <div class="grid">
-      <nav class="mainWindow">
-        <h2>Navigation/summary</h2>
-        <div class="darkWindow">Overview Screen</div>
-        <div class="lightWindow">Overview Screen</div>
-        <div class="lightWindow">Overview Screen</div>
-        <div class="lightWindow">Overview Screen</div>
-        <div class="graph darkWindow">
-          <h2>Fake Graph</h2>
+      <nav class="light window">
+        <h2 class="dark">Nav / Summary</h2>
+        <div class="dark window">Overview Screen</div>
+        <div class="light window">Overview Screen</div>
+        <div class="light window">Overview Screen</div>
+        <div class="light window">Overview Screen</div>
+        <div class="graph dark window">
+          <h2 class="dark">Fake Graph</h2>
           <img
             src="https://ak.picdn.net/shutterstock/videos/15215122/thumb/7.jpg"
             alt="fakegraph"
@@ -27,26 +27,35 @@
           />
         </div>
       </nav>
-
-      <main class="mainWindow">
-        <h2>Strategies</h2>
-        <div class="lightWindow">Strategy 1</div>
-        <div class="darkWindow">Strategy 2</div>
-        <div class="lightWindow">Strategy 3</div>
-        <div class="lightWindow">Strategy 4</div>
+      <main class="light window">
+        <h2 class="dark">Strategies</h2>
+        <div class="light window strategy"><h3 class="light window">Strategy 1</h3></div>
+        <div class="light window strategy">
+          <h3 class="dark window">Strategy 2</h3>
+          <div class="light window">
+            <h4>MSFT</h4>
+            <form class="open window light">
+              Form: NAme/Symbol - Type - #shares - target price - dividen yield
+              - EPS/EPS5 calculated: proposed equity - PE - earnings yield -
+              Time to recoup investment optional: reinvested
+            </form>
+          </div>
+        </div>
+        <div class="light window strategy">Strategy 3</div>
+        <div class="light window strategy">Strategy 4</div>
       </main>
 
-      <aside class="mainWindow">
-        <hs>Strategy Calculator</hs>
-        <div class="greenWindow">Happy Score</div>
-        <div class="greenWindow">Happy Score</div>
-        <div class="yellowWindow">Medium Score</div>
-        <div class="redWindow">Warning Score</div>
-        <div class="yellowWindow">Medium Score</div>
-        <div class="greenWindow">Happy Score</div>
-        <div class="redWindow">Warning Score</div>
-        <div class="redWindow">Warning Score</div>
-        <div class="yellowWindow">Medium Score</div>
+      <aside class="light window summary">
+        <h2 class="dark">Summary</h2>
+        <div class="green window">Happy Score</div>
+        <div class="green window">Happy Score</div>
+        <div class="yellow window">Medium Score</div>
+        <div class="red window">Warning Score</div>
+        <div class="yellow window">Medium Score</div>
+        <div class="green window">Happy Score</div>
+        <div class="red window">Warning Score</div>
+        <div class="red window">Warning Score</div>
+        <div class="yellow window">Medium Score</div>
       </aside>
     </div>
     <footer>Copyright ⓒ 2020 drbretto</footer>
